@@ -5,14 +5,16 @@ import './index.css';
 import { store, persistor } from './redux/store.js';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+import ThemeProvider from './components/ThemeProvider.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <PersistGate persistor={persistor}>
       <Provider store={store}>
-        <App />
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
       </Provider>
     </PersistGate>
-
 );
 
 {/* The Provider component makes the Redux store available to any nested components that need to access the Redux state. */}
