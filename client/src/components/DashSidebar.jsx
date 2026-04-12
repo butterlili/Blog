@@ -16,13 +16,14 @@ export default function DashSidebar() {
   return (
     <Sidebar className="w-full md:w-56">
       <Sidebar.Items>
-        <Sidebar.ItemGroup>
+        {/*<Sidebar.ItemGroup>
           <Link to={'/dashboard?tab=profile'}>
-          <Sidebar.Item active={tab ==='profile'} icon={HiUser} label={"User"} labelColor='dark'>
-              Profile
-            </Sidebar.Item>
-          </Link>
-            <Sidebar.Item icon={HiArrowSmRight} cursor='cursor-pointer'>
+          <Sidebar.Item active={tab ==='profile'} icon={HiUser} label={"User"} labelColor='dark'>*/}
+          <Sidebar.ItemGroup  >
+          <Sidebar.Item as={Link} to='/dashboard?tab=profile' active={tab ==='profile'} icon={HiUser} label={"User"} labelColor='dark'>
+            Profile
+          </Sidebar.Item>
+            <Sidebar.Item icon={HiArrowSmRight} className='cursor-pointer'>
               Sign Out
             </Sidebar.Item>
           </Sidebar.ItemGroup>
